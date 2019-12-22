@@ -1,0 +1,18 @@
+{{matchesobs}}
+{{matchesob | async}}
+
+
+<div class="right" *ngIf="matches">
+
+  <h3>Matches</h3>
+  <ul>
+    <li *ngFor="let match of matches">
+      <nav>
+        <a [routerLink]="['/leagues', match.Id]" routerLinkActive="active">{{match.Name}}</a>
+      </nav>
+    </li>
+  </ul>
+
+  <button (click)="addMatch()">Add Match</button>
+
+</div>
